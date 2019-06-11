@@ -21,6 +21,6 @@ public abstract class BasePresenter<M extends BaseModel>{
      * 在Activity或Fragment卸载时调用View结束的方法
      */
     public void destroy() {
-        model.onDestroy();
+        if(model!=null)model.onDestroy();
     }
 }
